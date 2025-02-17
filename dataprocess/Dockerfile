@@ -7,6 +7,8 @@ WORKDIR /app
 # Copy application files specific to dataprocess
 COPY . /app
 
+RUN pip install scikit-learn==1.3.2 torch transformers>=4.0.0
+
 # Install dependencies from the local requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 

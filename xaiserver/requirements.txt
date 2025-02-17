@@ -3,9 +3,9 @@ uvicorn
 aiohttp
 pydantic==1.9.0
 python-dotenv
-torch
-torchvision
-torchaudio
+# torch
+# torchvision
+# torchaudio
 transformers>=4.0.0
 numpy
 Pillow
@@ -13,3 +13,6 @@ matplotlib
 av
 tqdm
 asyncio
+codecarbon
+ttach
+opencv-python

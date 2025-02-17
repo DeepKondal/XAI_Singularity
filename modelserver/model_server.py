@@ -5,7 +5,7 @@ import os
 import torch
 # from attention_extractor import AttentionExtractor  
 from fastapi import UploadFile
-import import_ipynb
+#import import_ipynb
 import matplotlib.pyplot as plt
 import json
 from generateTemporalSpatial import process_video, create_sample_frames_visualization, AttentionExtractor

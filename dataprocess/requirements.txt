@@ -1,7 +1,7 @@
 fastapi
 uvicorn
 aiofiles
-pika  # RabbitMQ Client
+pika
 python-multipart
 numpy
 pandas
@@ -12,3 +12,4 @@ av
 asyncio
 python-dotenv
 azure-storage-blob
+tqdm

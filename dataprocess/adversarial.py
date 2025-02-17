@@ -174,10 +174,19 @@ def evaluate_and_generate_adversarial(config):
     
     return results
 
+
+# if __name__ == "__main__":
+#     config = {
+#         'model_name': 'facebook/timesformer-base-finetuned-k400',
+#         'video_directory': '/speed-scratch/s_abidee/videos',  # Updated to point to the correct directory on HPC
+#         'label_file': '/speed-scratch/s_abidee/videos/kinetics400_val_list_videos.txt',  # Ensure this file is also correctly located
+#         'epsilon': 0.1
+#     }
+
 if __name__ == "__main__":
     config = {
         'model_name': 'facebook/timesformer-base-finetuned-k400',
-        'video_directory': 'dataprocess/test_video', # input
+        'video_directory': 'dataprocess/video', # input
         'label_file': 'dataprocess/kinetics400_val_list_videos.txt',# config['label_file']
         'epsilon': 0.1  
     }
