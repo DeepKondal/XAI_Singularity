@@ -1,0 +1,57 @@
+_format_version: "1.1"
+
+services:
+  - name: dataprocess-service
+    url: http://dataprocess:8001
+    routes:
+      - name: dataprocess-route
+        paths:
+          - /dataprocess
+
+  - name: modelserver-service
+    url: http://modelserver:8002
+    routes:
+      - name: modelserver-route
+        paths:
+          - /modelserver
+
+  - name: xai-service
+    url: http://xai:8003
+    routes:
+      - name: xai-route
+        paths:
+          - /xai
+  
+  - name: center-service
+    url: http://center_server:8880
+    routes:
+      - name: center-route
+        paths:
+          - /center
+
+upstreams:
+  - name: dataprocess_upstream
+    targets:
+      - target: dataprocess-v1:8001
+        weight: ${DATAPROCESS_V1_WEIGHT}
+      - target: dataprocess-v2:8001
+        weight: ${DATAPROCESS_V2_WEIGHT}
+
+  - name: modelserver_upstream
+    targets:
+      - target: modelserver-v1:8002
+        weight: ${MODELSERVER_V1_WEIGHT}
+      - target: modelserver-v2:8002
+        weight: ${MODELSERVER_V2_WEIGHT}
+
+  - name: xai_service_upstream
+    targets:
+      - target: xai-service-v1:8003
+        weight: ${XAI_SERVICE_V1_WEIGHT}
+      - target: xai-service-v2:8003
+        weight: ${XAI_SERVICE_V2_WEIGHT}
+  
+  - name: center_upstream
+    targets:
+      - target: center_server:8880
+        weight: 100

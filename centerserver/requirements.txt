@@ -1,0 +1,8 @@
+fastapi 
+httpx
+uvicorn
+neo4j
+asyncio
+
+
+

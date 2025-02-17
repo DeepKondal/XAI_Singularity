@@ -1,0 +1,9 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="score_factor <= 0.5\ngini = 0.496\nsamples = 4937\nvalue = [2690, 2247]\nclass = No Recidivism", fillcolor="#fbeade"] ;
+1 [label="gini = 0.431\nsamples = 2720\nvalue = [1866, 854]\nclass = No Recidivism", fillcolor="#f1bb94"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.467\nsamples = 2217\nvalue = [824, 1393]\nclass = Recidivism", fillcolor="#aed7f4"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}

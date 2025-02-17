@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+aiofiles
+pika  # RabbitMQ Client
+python-multipart
+numpy
+pandas
+opencv-python
+python-dotenv
+pillow
+av
+asyncio
+python-dotenv
+azure-storage-blob
